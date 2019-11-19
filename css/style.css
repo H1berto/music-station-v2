@@ -1,0 +1,274 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing:border-box;
+    font-family: 'Alata', sans-serif;
+}
+/* Background Color */
+.bg_c1{
+    background-color: red;
+}
+.bg_c2{
+    background-color: crimson;
+}
+.bg_c3{
+    background-color: darkorange;
+}
+.bg_c4{
+    background-color: darkkhaki;
+}
+.bg_c5{
+    background-color: darkgoldenrod;
+}
+.bg_c6{
+    background-color: brown;
+}
+.bg_c7{
+    background-color: royalblue;
+}
+.bg_c8{
+    background-color: khaki;
+}
+.bg_c9{
+    background-color: skyblue;
+}
+/* Menu */
+#menu{
+    width: 100%;
+    height: 100%;
+}
+#menu ul{
+    height: 7vh;
+    background-color:#2576B2 ;
+    list-style: none;
+    text-align: left;
+    
+}
+
+#menu ul li{
+    display: inline;
+    margin-left:40px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#menu ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+#logo{
+    width: 120px;
+    height: 100%;
+    
+}
+/* Container Principal Slider */
+.slider {
+    display: block;
+    height:95vh;
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+/* Sub container com a imagem e o texto do slide */
+.item_slide {
+    display: none;
+    height: 100%;
+}
+/* Imagem do slide */
+.img_slide {
+    margin: auto;
+    height: 80%;
+    width: 100%;
+    vertical-align: top;
+} 
+/* Botão de previa e proximo do slider*/
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+/* Posição do botão de proximo a direita */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+/* Com hover, adiciona background color preto com um pouco de transparencia  */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.content_slide{
+    color: #f2f2f2;
+    text-align: center;
+    height: 20%;
+    background-color:rgba(37, 118, 178,0.8);
+}
+
+.content_slide .btn_play{
+    padding-top: 15px;
+}
+
+.content_slide p{
+    padding: 20px 180px 0px 180px;
+    font-size: 105%;
+}
+
+#dots{
+    margin-top: -50px;
+}
+
+/* Indicadores dos slides*/
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: rgb(81, 137, 180);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+/* Quando ativo ou com hover, troca a cor */
+.active, .dot:hover {
+    background-color: rgb(22, 73, 112);
+}
+
+/* Animação Fading */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+#container_card{
+    background-color: snow;
+}
+  
+.title{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.list_card{
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.list_card .card_flip{
+    display: inline-block;
+    margin-right: 30px;
+}
+  /* Card Flip que possui todo o conteudo dos artistas*/
+.card_flip {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remover caso não queirá mais efeitos 3D */
+  }
+  
+  /* Sub Container que estrutura todo o conteudo do card  */
+  .card_flip_inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Faz o efeito de rotação no eixo Y quando passa o mouse em cima */
+  .card_flip:hover .card_flip_inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Posição do conteudo do card frontal e posterior */
+  .card_flip_front, .card_flip_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  /* Conteudo frontal do card */
+  .card_flip_front {
+    background-color: #bbb;
+    color: black;
+  }
+
+  .card_flip_front img{
+      width: auto;
+      height: auto;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+  
+  /* Conteudo posterior do card */
+  .card_flip_back {
+    padding-top: 20%;
+    align-items: center;
+    vertical-align: middle;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+.ctg_card_list{
+    text-align: center;
+}  
+
+.ctg_card{
+    align-items: center;
+    vertical-align: middle;
+    width:150px;
+    margin-top: 60px;
+    display: inline-block;
+}
+.ctg_card h3{
+    font-size: 16px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.category_list{
+    padding-bottom: 30px;
+}
+
+.formulario{
+    
+    background-color: #2576B2;
+}
+.form_content{
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 24px;
+}
+

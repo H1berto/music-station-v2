@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Music Player v2.0</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="fontawesome/less/fontawesome.less">
+    <link rel="stylesheet" href="fontawesome/scss/fontawesome.scss">
+    <link rel="stylesheet" href="fontawesome/css/brands.css">
+    <link rel="stylesheet" href="fontawesome/css/solid.css">
+    <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+
+</head>
+
+<body>
+
+    <div id="menu">
+        <ul>
+            <li><img id="logo" src="img/logo.png" alt="logo"></li>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Destaques</a></li>
+            <li><a href="#">Artistas</a></li>
+            <li><a href="#">Categorias</a></li>
+            <li><a href="#">Recomendações</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </div>
+
+    <!-- Sessão de slide com imagem titulo texto e -->
+    <div>
+        <!-- Container slider com todo o conteudo -->
+        <div class="slider">
+            <div class="item_slide fade">
+                <img class="img_slide" src="img/coldplay.jpg" alt="Banda Coldplay">
+                <div class="content_slide">
+                    <div class="btn_play" id="btn1" onclick="music(1)">
+                        <h2>ColdPlay - Everyday Life</h2>
+                    </div>
+                    <p>Musica do mais novo album da banda, ja sendo ouvida por todo o mundo,
+                        criando ainda mais expectativa para o lançamento do resto das musicas do album!</p>
+                    <audio src=""></audio>
+                </div>
+            </div>
+            <div class="item_slide fade">
+                <img class="img_slide" src="img/daftpunk.jpg" alt="Banda Daft Punk">
+                <div class="content_slide">
+                    <div class="btn_play" id="btn2" onclick="music(2)">
+                        <h2>Daft Punk - Digital Love</h2>
+                    </div>
+                    <p>Classica e viciante, uma musica que unica a qual a banda lançou juntamente com um filme deles,
+                        chamado Interstella5555, onde o filme é a união de todas as musicas de seu album Discovery!</p>
+                    <audio src=""></audio>
+                </div>
+            </div>
+            <div class="item_slide fade">
+                <img class="img_slide" src="img/imagine-dragons.jpg" alt="Banda Imagine Dragons">
+                <div class="content_slide">
+                    <div class="btn_play" id="btn3" onclick="music(3)">
+                        <h2>Imagine Dragons - Warriors</h2>
+                    </div>
+                    <p>Musica inspiradora para players do lolzinho desde de 2015... musica que foi lançada pela banda em
+                        parceria
+                        com a Riot Games, especialmente para o Mundial de seu maior game até então, League of Legends!
+                    </p>
+                    <audio src=""></audio>
+                </div>
+            </div>
+            <div class="item_slide fade">
+                <img class="img_slide" src="img/linkinpark.webp" alt="Banda Linkin Park">
+                <div class="content_slide">
+                    <div class="btn_play" id="btn4" onclick="music(4)">
+                        <h2>Linkin Park - In My Remains</h2>
+                    </div>
+                    <p>A musicas das musicas, de causar tremores em qualquer Soldier de plantão, simplesmente
+                        pesada...musica lançada
+                        para o albuns Living Things em 2015, um album com a pegada + Alternative.</p>
+                    <audio src=""></audio>
+                </div>
+            </div>
+            <div class="item_slide fade">
+                <img class="img_slide" src="img/zedd.jpg" alt="Dj Zedd">
+                <div class="content_slide">
+                    <div class="btn_play" id="btn5" onclick="music(5)">
+                        <h2>Zedd - Ignite</h2>
+                    </div>
+                    <p>Mais uma daquelas de levantar o astral do gamers, musica que foi lançada em 2016 em parceria
+                        novamente com a riot games,
+                        para fazer essa obra prima que coloca qualquer um no desafiante instantaneamente só de ouvir!
+                    </p>
+                    <audio src=""></audio>
+                </div>
+            </div>
+            <div class="item_slide fade">
+                <img class="img_slide" src="img/chainsmokers.jpg" alt="Dj Zedd">
+                <div class="content_slide">
+                    <div class="btn_play" id="btn5" onclick="music(6)">
+                        <h2>The Chainsmokers - Something just like this</h2>
+                    </div>
+                    <p> Com toda a certeza de fazer emocionar e fazer refletir em seus sonhos,
+                        contagiante e tocante, uma combinação de letra e som incrivel.
+
+                    </p>
+                    <audio src=""></audio>
+                </div>
+            </div>
+            <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+
+            <!-- Indicadores de slide -->
+            <div id="dots" style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- Sessão de cards com artistas e bandas famosas -->
+    <div id="container_card">
+        <div class="title">
+            <h1>Artistas/Bandas em Destaques</h1>
+        </div>
+
+        <div class="list_card">
+            <div class="card_flip">
+                <div class="card_flip_inner">
+                    <div class="card_flip_front">
+                        <img src="img/card_pmalone.jpg" alt="Avatar" style="width:300px;height:300px;">
+                    </div>
+                    <div class="card_flip_back bg_c1">
+                        <h1>Post Malone</h1>
+                        <h3>R&B e Rap</h3>
+                        <br>
+                        <p>Musicas em destaque:<br>
+                            <ul>
+                                <li>Circles</li>
+                                <li>Goodbyes</li>
+                                <li>Sunflower</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card_flip">
+                <div class="card_flip_inner">
+                    <div class="card_flip_front">
+                        <img src="img/card_tdamage.jpg" alt="Avatar" style="width:300px;height:300px;">
+                    </div>
+                    <div class="card_flip_back bg_c2">
+                        <h1>True Damage</h1>
+                        <h3>R&B e Rap</h3>
+                        <br>
+                        <p>Musicas em destaque:<br>
+                            <ul>
+                                <li>GIANTS</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card_flip">
+                <div class="card_flip_inner">
+                    <div class="card_flip_front">
+                        <img src="img/card_mgapple.jpg" alt="Avatar" style="width:300px;height:300px;">
+                    </div>
+                    <div class="card_flip_back bg_c3">
+                        <h1>Mrs. GREEN APPLE</h1>
+                        <h3>R&B e Rap</h3>
+                        <br>
+                        <p>Musicas em destaque:<br>
+                            <ul>
+                                <li>ナニヲナニヲ</li>
+                                <li>インフェルノ</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="list_card">
+            <div class="card_flip">
+                <div class="card_flip_inner">
+                    <div class="card_flip_front">
+                        <img src="img/card_rdsaron.jpg" alt="Avatar" style="width:300px;height:300px;">
+                    </div>
+                    <div class="card_flip_back bg_c4">
+                        <h1>Rosa de Saron</h1>
+                        <h3>Rock Cristão</h3>
+                        <br>
+                        <p>Musicas em destaque:<br>
+                            <ul>
+                                <li>Ninguém Mais </li>
+                                <li>O sol da meia noite</li>
+                                <li>Cartas ao remetente</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card_flip">
+                <div class="card_flip_inner">
+                    <div class="card_flip_front">
+                        <img src="img/card_weezer.jpg" alt="Avatar" style="width:300px;height:300px;">
+                    </div>
+                    <div class="card_flip_back bg_c5">
+                        <h1>Weezer</h1>
+                        <h3>Pop Rock</h3>
+                        <br>
+                        <p>Musicas em destaque:<br>
+                            <ul>
+                                <li>Say It Ain't So</li>
+                                <li>Island In The Sun</li>
+                                <li>Beverly Hills</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card_flip">
+                <div class="card_flip_inner">
+                    <div class="card_flip_front">
+                        <img src="img/card_dpowter.jpg" alt="Avatar" style="width:300px;height:300px;">
+                    </div>
+                    <div class="card_flip_back bg_c6">
+                        <h1>Daniel Powter</h1>
+                        <h3>Pop Rock</h3>
+                        <br>
+                        <p>Musicas em destaque:<br>
+                            <ul>
+                                <li>Bad Day</li>
+                                <li>Free Loop</li>
+                                <li>Best of Me</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="list_card">
+            <div class="card_flip">
+                <div class="card_flip_inner">
+                    <div class="card_flip_front">
+                        <img src="img/card_lbouquet.jpg" alt="Avatar" style="width:300px;height:300px;">
+                    </div>
+                    <div class="card_flip_back bg_c7">
+                        <h1>La Bouquet</h1>
+                        <h3>Indie/Alternative</h3>
+                        <br>
+                        <p>Musicas em destaque:<br>
+                            <ul>
+                                <li>1990</li>
+                                <li>Kiss me, Kill me</li>
+                                <li>Loveless</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card_flip">
+                <div class="card_flip_inner">
+                    <div class="card_flip_front">
+                        <img src="img/card_timpala.jpg" alt="Avatar" style="width:300px;height:300px;">
+                    </div>
+                    <div class="card_flip_back bg_c8">
+                        <h1>Tame Impala</h1>
+                        <h3> Rock/Pop psicodélico</h3>
+                        <br>
+                        <p>Musicas em destaque:<br>
+                            <ul>
+                                <li>The Less I Know The Better</li>
+                                <li>It Might Be Time</li>
+                                <li>Borderline</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card_flip">
+                <div class="card_flip_inner">
+                    <div class="card_flip_front">
+                        <img src="img/card_ichika.jpg" alt="Avatar" style="width:300px;height:300px;">
+                    </div>
+                    <div class="card_flip_back bg_c9">
+                        <h1>Ichika</h1>
+                        <h3>Pop</h3>
+                        <br>
+                        <p>Musicas em destaque:<br>
+                            <ul>
+                                <li>in the morning</li>
+                                <li>illusory sense</li>
+                                <li>flowers</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Sessão de playlist de musicas  -->
+    <div>
+
+    </div>
+    <!-- Sessão de cards com categorias de musicas  -->
+    <div class="category_list">
+        <div class="title">
+            <h1>Categorias e Generos </h1>
+        </div>
+        <div class="ctg_card_list">
+            <div class="ctg_card bg_c1">
+                <span style="font-size:100px;">
+                    <i class="fas fa-music"></i>
+                </span>
+                <h3>Rock</h3>
+            </div>
+            <div class="ctg_card bg_c2">
+                <span style="font-size:100px;">
+                    <i class="fas fa-music"></i>
+                </span>
+                <h3>Pop</h3>
+            </div>
+            <div class="ctg_card bg_c3">
+                <span style="font-size:100px;">
+                    <i class="fas fa-music"></i>
+                </span>
+                <h3>R&B</h3>
+            </div>
+            <div class="ctg_card bg_c4">
+                <span style="font-size:100px;">
+                    <i class="fas fa-music"></i>
+                </span>
+                <h3>Hip Hop</h3>
+            </div>
+            <div class="ctg_card bg_c5">
+                <span style="font-size:100px;">
+                    <i class="fas fa-music"></i>
+                </span>
+                <h3>Alternative</h3>
+            </div>
+            <div class="ctg_card bg_c6">
+                <span style="font-size:100px;">
+                    <i class="fas fa-music"></i>
+                </span>
+                <h3>Reggae</h3>
+            </div>
+        </div>
+
+        <div class="ctg_card_list">
+            <div class="ctg_card bg_c7">
+                <span style="font-size:100px;">
+                    <i class="fas fa-music"></i>
+                </span>
+                <h3>Sertanejo</h3>
+            </div>
+            <div class="ctg_card bg_c8">
+                <span style="font-size:100px;">
+                    <i class="fas fa-music"></i>
+                </span>
+                <h3>Indie</h3>
+            </div>
+            <div class="ctg_card bg_c4">
+                <span style="font-size:100px;">
+                    <i class="fas fa-music"></i>
+                </span>
+                <h3>Samba e pagode</h3>
+            </div>
+            <div class="ctg_card bg_c2">
+                <span style="font-size:100px;">
+                    <i class="fas fa-music"></i>
+                </span>
+                <h3>Eletronica</h3>
+            </div>
+            <div class="ctg_card bg_c7">
+                <span style="font-size:100px;">
+                    <i class="fas fa-music"></i>
+                </span>
+                <h3>K-pop</h3>
+            </div>
+            <div class="ctg_card bg_c9">
+                <span style="font-size:100px;">
+                    <i class="fas fa-music"></i>
+                </span>
+                <h3>Jazz</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="formulario">
+        <form name="meu_form">
+            <div class="title">
+                <h1>Entre em contato</h1>
+            </div>
+            <div class="form_content">
+                <label for="nome">Nome</label>
+                <input type="text" id="nomeid" placeholder="Seu nome" required="required" name="nome" />
+                <br>
+                <label for="fone">Fone</label>
+                <input type="text" id="foneid" placeholder="(xx)xx-xx-xx-xx" name="fone" />
+                <br>
+                <label for="email">Email</label>
+                <input type="email" id="emailid" placeholder="fulano@mail.com" name="email" />
+                <br>
+                <label for="mensagem">Mensagem</label>
+                <br>
+                <textarea placeholder="Deixe uma mensagem!"></textarea>
+                <br>
+                <input type="submit" onclick="Enviar();" value="Enviar" />
+            </form>
+
+        </form>
+    </div>
+    <footer></footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>b
